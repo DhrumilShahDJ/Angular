@@ -1,0 +1,30 @@
+<div>
+  <h1>{{ title }}</h1>
+</div>
+
+<div>
+  <img [src]="image" alt="Image" />
+</div>
+
+<div>
+  <button (click)="incrementCount()">Click</button>
+  <p>{{ count }}</p>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="name" />
+  <p>{{ name }}</p>
+</div>
+
+<!-- Two aproches for intercept property between class and template  -->
+<!-- 1. Split Binding  -->
+<div>
+  <input #userNameRef type="text" [ngModel]="userName" (ngModelChange)="getAlert($event)" />
+  <p>{{ userName }}</p>
+</div>
+
+<!-- 2. Getter and Setters  -->
+<div>
+  <input type="text" [(ngModel)]="customerName" />
+  <p>{{ customerName }}</p>
+</div>
