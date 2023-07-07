@@ -2,4 +2,8 @@
 <button (click)="isLoggedIn = true">Login</button>
 <button (click)="isLoggedIn = false">Logout</button>
 <p>{{ isLoggedIn }}</p>
-<app-child [loggedIn]="isLoggedIn"></app-child>
+<app-child #child [loggedIn]="isLoggedIn"></app-child>
+
+<!-- Template Refrence Variable Example -->
+<p>{{child.name}}</p>
+<button (click)="child.calledFromParent()">ChildCall</button>
