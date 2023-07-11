@@ -1,0 +1,15 @@
+<h1>Main Component</h1>
+<div>
+  <nav>
+    <ol>
+      <!-- we use "routerLink" instead of "href", bcz using routerLink, the page cannot reload and application state will be same -->
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="home">Home</a></li>
+      <li routerLinkActive="active"><a routerLink="about">About</a></li>
+      <li routerLinkActive="active"><a routerLink="contact">Contact</a></li>
+    </ol>
+  </nav>
+</div>
+
+<div>
+  <router-outlet></router-outlet> <!-- Tells angular for routes incuded in current module -->
+</div>
